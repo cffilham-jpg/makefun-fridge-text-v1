@@ -8,6 +8,9 @@ from pathlib import Path
 
 LINE = "The butter has seen things."
 
+if not 1 <= len(LINE) <= 140:
+    raise ValueError("The entry line must be between 1 and 140 characters.")
+
 if not LINE.strip():
     raise ValueError("The entry line must not be empty or whitespace-only.")
 
